@@ -1,0 +1,22 @@
+{
+  "name": "Helmes",
+  "description": "testjob",
+  "main": "index.html",
+  "moduleType": [],
+  "authors": [
+    "Olav Viitmann"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+	"matchHeight": "^0.7.0"
+  }
+}
