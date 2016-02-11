@@ -34,7 +34,6 @@ body {
 	content: ' ';
 	position: absolute;
 	border: solid 6px transparent;
-	border-top: solid 0px transparent;
 	border-width: 6px;
 	left: 50%;
 	margin-left: -6px;
@@ -46,7 +45,6 @@ body {
 	content: ' ';
 	position: absolute;
 	border: solid 6px transparent;
-	border-top: solid 0px transparent;
 	border-width: 6px;
 	left: 50%;
 	margin-left: -6px;
