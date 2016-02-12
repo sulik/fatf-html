@@ -503,11 +503,8 @@ p {
 		}
 		
 		.search-xs {
-			position: absolute;
-			width: 55.3125%;
-			margin-left: 27.5%;
-			margin-right: 17.1875%;
-			margin-top: 1px;
+			position: relative;
+			margin: 1px 55px -39px 88px;
 		}
 		
 		.navbar-toggle {
