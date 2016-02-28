@@ -135,6 +135,10 @@ body {
 	color: #db3721;
 }
 
+.top-3 {
+	top: 3px;
+}
+
 .nav-footer li {
 	line-height: 1.2em;
 	margin-bottom: 0.5em;
@@ -142,6 +146,73 @@ body {
 
 .icon-padding {
 	padding-right: 6px;
+}
+
+.footer-buttons a:hover {
+	background-color: #3f7f8f;
+}
+
+.icon-flag-english {
+	background-position: 0px -160px;
+}
+
+.icon-flag-french {
+	background-position: 0px -183px;
+}
+
+.icon-facebook {
+	background-position: -3px 0px;
+}
+
+.icon-twitter {
+	background-position: 2px -80px;
+}
+
+.icon-flag-english, .icon-flag-french {
+	display: inline-block;
+	width: 24px;
+	height: 13px;
+	overflow: hidden;
+	background-image: url(../../gfx/fatf-sprite.png);
+	background-repeat: no-repeat;
+	margin: -1px 0;
+	padding: 0 18px 0 28px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 13px;	
+}
+
+.languages span.english, .languages span.french {
+	padding: 0 1px 1px 5px;
+}
+
+.languages span.french {
+	padding-right: 3px;
+}
+
+.languages span.english:hover, .languages span.french:hover, .languages span.english.active, .languages span.french.active {
+	background: #3e7b8b;
+}
+
+.icon-flag-english.active {
+	color: #c6e7ef !important;
+}
+
+.languages span.french {
+	margin-left: 18px;
+}
+
+.icon-facebook, .icon-twitter {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	background-color: #4f9eb2;
+	background-image: url(../../gfx/fatf-sprite.png);
+	background-repeat: no-repeat;
+	text-indent: 100%;
+	margin: -31px 0 -31px 31px;
 }
 
 .no-margin {
@@ -341,7 +412,7 @@ p {
 			text-align: right;
 		}
 		
-		.footer-btn-h3 {
+		.footer-buttons h3 {
 			display: inline-block;
 		}
 		
@@ -604,13 +675,18 @@ p {
 			margin-top: 11px;
 		}
 		
-		.footer-icon {
-			margin-right: 7px;
+		.icon-facebook {
+			background-position: -13px -6px;
 		}
-		
-		.footer-icon-resize {
-			height: 56px;
+
+		.icon-twitter {
+			background-position: -4px -87px;
+			}
+
+		.icon-facebook, .icon-twitter {
 			width: 56px;
+			height: 56px;
+			margin: -24px 7px -24px 0;
 		}
 		
 		.btn-footer {
