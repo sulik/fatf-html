@@ -4,7 +4,7 @@
 
 
 ## Live demo
-[www.maritana.ee/helmes](http://www.maritana.ee/helmes/)
+[www.maritana.ee/helmes2](http://www.maritana.ee/helmes2/)
 
 
 ## How to build
