@@ -1,11 +1,20 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+	lessDir: 'public/less/',
+    lessDistDir: 'dist/less/',    
     jsDir: 'public/javascripts/',
     jsDistDir: 'dist/javascripts/',    
     cssDir: 'public/stylesheets/',
     cssDistDir: 'dist/stylesheets/',
     pkg: grunt.file.readJSON('package.json'),
+	less: {
+		development: {
+			files: {
+				'<%=lessDistDir%><%= pkg.name %>.css': '<%=lessDir%>*.less'
+			}
+		},
+	},
 	concat: {
       js: {
         options: {
@@ -15,7 +24,7 @@ module.exports = function(grunt) {
         dest: '<%=jsDistDir%><%= pkg.name %>.js'
       },
       css: {
-        src: ['<%=cssDir%>*.css'],
+        src: ['<%=lessDistDir%>*.css','<%=cssDir%>*.css'],
         dest: '<%=cssDistDir%><%= pkg.name %>.css'
       }
     },
@@ -45,6 +54,7 @@ module.exports = function(grunt) {
     }
   });
   
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -52,6 +62,7 @@ module.exports = function(grunt) {
   
 
   grunt.registerTask('default', [
+	'less',
     'concat',
     'uglify',
     'cssmin',

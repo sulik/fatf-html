@@ -1,3 +1,0 @@
-	$(function() {
-	$('.news-item').matchHeight();
-	});

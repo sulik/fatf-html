@@ -10,8 +10,9 @@
     <title>FATF</title>
 
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-	
+
 	<link href="dist/stylesheets/helmes-fatf.min.css" rel="stylesheet">
+
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,7 +26,7 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-		<div class="search-xs">
+		<div class="search-xs visible-xs-block">
 			  <div class="input-group">
 				<input type="text" class="search-query form-control" placeholder="Search...">
 				<span class="input-group-btn">
@@ -66,7 +67,7 @@
 			<ul class="nav navbar-nav calendar">
 				<li><a href="#"><span class="glyphicon glyphicon-calendar icon-padding top-3"></span>Calendars</a></li>
 			</ul>
-		  <div class="navbar-form navbar-right">
+		  <div class="navbar-form navbar-right hidden-xs">
 			  <div class="input-group">
 				<input type="text" class="search-query form-control" placeholder="Search...">
 				<span class="input-group-btn">
@@ -152,14 +153,17 @@
 					<div class="news-readmore text-size-14px pull-right"><a href="#"><span class="news-more">(...) </span>Read more</a></div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12">
-				<div class="divider">
-					<span class="divider-text"><a href="#">All publications <span class="glyphicon glyphicon-menu-right divider-arrow top-3"></span></a></span>
-				</div>
-			</div>
-		</div>
     </div>
+	
+	<div class="container">
+		<div class="row">
+				<div class="col-xs-12">
+					<div class="divider">
+						<span class="divider-text"><a href="#">All publications <span class="glyphicon glyphicon-menu-right divider-arrow top-3"></span></a></span>
+					</div>
+				</div>
+		</div>
+	</div>
     
     <div class="container content">
 		<div class="row">
@@ -176,13 +180,12 @@
 				<li class="active"><a href="#">All FATF publications</a></li>
 			</ul>
 	    </div>
-	    
 	    <div class="content-main col-lg-9 col-sm-6 clearfix">
 			<h1>Key publications</h1>
-			<a href="#"><img src="gfx/fatf-recom.jpg" width="154" height="217" class="img-responsive pull-left border m-r-20 content-thumb" alt="The FATF Recommendations"></a>
+			<a href="#"><img src="gfx/fatf-recom.jpg" width="154" height="217" class="img-responsive pull-left m-r-20 visible-lg-block" alt="The FATF Recommendations"></a>
 		    <ul class="content-list list-unstyled">
-				<li><h2 class="no-margin"><a href="#">The FATF Recommendations</a></h2>
-					<p class="text-size-20px m-b-10">adopted February 2012</p>
+				<li><h2><a href="#">The FATF Recommendations</a></h2>
+					<p class="text-size-20px m-b-20">adopted February 2012</p>
 					<p class="clearfix">International Standards on Combating Money Laundering and the Financing of Terrorism & Proliferation</p>
 				</li>
 				<li><h3><a href="#">Methodology for Assessing Compliance with the FATF 40 Recommendations and FATF 9 Special Recommendations</a></h3></li>
@@ -190,14 +193,6 @@
 				<li><h3><a href="#">Improving Global AML/CFT Compliance: on-going process - 14 February 2014</a></h3><p>Other monitored jurisdictions</p></li>
 				<li><h3><a href="#"><span class="glyphicon glyphicon-download-alt icon-padding"></span>FATF Annual Report: 2012-2013</a></h3></li>
 			</ul>
-			
-			
-			
-			
-			
-			
-			
-			
 	    </div>
 		</div>
     </div>
@@ -253,7 +248,7 @@
 						<h3><strong>Follow us:</strong></h3>
 						<a href="#" class="icon-facebook">Facebook</a>
 						<a href="#" class="icon-twitter">Twitter</a>
-						<button type="button" class="btn btn-primary btn-lg btn-footer footer-icon">E-mail Alerts</button>
+						<button type="button" class="btn btn-primary btn-lg btn-footer">E-mail Alerts</button>
 					</div>
 				</div>
 			</div>
