@@ -3,9 +3,9 @@
 
 @font-family-sans-serif:  Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
 @font-size-base:          18px;
-@font-size-h1:            floor((@font-size-base * 2));
-@font-size-h2:            30px;
-@font-size-h3:            ceil((@font-size-base * 1.1));
+@font-size-h1:            floor((@font-size-base * 2)); // 36px
+@font-size-h2:            floor((@font-size-base * 1.7)); // 30px
+@font-size-h3:            ceil((@font-size-base * 1.1)); // 20px
 
 @btn-font-weight:                bold;
 @btn-default-color:              #fff;
@@ -13,6 +13,11 @@
 @btn-primary-bg:                 #4f9eb2;
 
 @input-color:                    #666;
+
+//** Unit-less `line-height` for use in components like buttons.
+@line-height-base:        1.428571429; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 @navbar-height:                    45px;
 @navbar-padding-vertical:          ((100px - @line-height-computed) / 2);
@@ -24,3 +29,4 @@
 @navbar-default-link-active-bg:            transparent;
 
 @nav-link-hover-bg:                         #4f9eb2	;
+
