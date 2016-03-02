@@ -2,7 +2,8 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 	lessDir: 'public/less/',
-    lessDistDir: 'dist/less/',    
+    lessDistDir: 'dist/less/',
+	cmqDistDir: 'dist/cmq/', 	
     jsDir: 'public/javascripts/',
     jsDistDir: 'dist/javascripts/',    
     cssDir: 'public/stylesheets/',
@@ -15,6 +16,16 @@ module.exports = function(grunt) {
 			}
 		},
 	},
+	cmq: {
+		options: {
+			log: false
+		},
+		your_target: {
+			files: {
+				'<%=cmqDistDir%><%= pkg.name %>.css': '<%=lessDistDir%>*.css'
+			}
+		}
+	},
 	concat: {
       js: {
         options: {
@@ -24,7 +35,7 @@ module.exports = function(grunt) {
         dest: '<%=jsDistDir%><%= pkg.name %>.js'
       },
       css: {
-        src: ['<%=lessDistDir%>*.css','<%=cssDir%>*.css'],
+        src: ['<%=cssDir%>*.css', '<%=cmqDistDir%>*.css'],
         dest: '<%=cssDistDir%><%= pkg.name %>.css'
       }
     },
@@ -50,11 +61,12 @@ module.exports = function(grunt) {
     },
     watch: {
     files: ['<%=lessDir%>*.less', '<%=jsDir%>*.js', '<%=cssDir%>*.css'],
-    tasks: ['less', 'concat', 'uglify', 'cssmin']
+    tasks: ['less', 'cmq', 'concat', 'uglify', 'cssmin']
     }
   });
   
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-combine-media-queries');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -63,6 +75,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', [
 	'less',
+	'cmq',
     'concat',
     'uglify',
     'cssmin',
